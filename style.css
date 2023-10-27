@@ -1,0 +1,88 @@
+body {
+    background: url('snakebg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.body{
+    display: flex;
+}
+
+#board {
+    background: linear-gradient(rgb(25, 50, 212), green);
+    width: 50%;
+    height: 94vmin;
+    display: center;
+    border: 6px solid ;
+    /* Set an initial transparent border */
+    animation: pulseBorder 4s infinite;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+    /* Apply the animation */
+}
+
+@keyframes pulseBorder {
+    0% {
+        border-color: transparent;
+    }
+
+    25% {
+        border-color: red;
+        /* Change the border color at 50% of the animation */
+    }
+    50%{
+     border-color:yellow;
+    }
+    75%{
+        border-color: blue;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+.food{
+    background-color: rgb(254, 251, 251);
+    border-radius: 20%;
+}
+
+.head1{
+    background: linear-gradient(black, rgb(45, 232, 238));
+    border: 2px solid black;
+    border-radius: 10%;
+}
+
+.snake {
+    /* background-color: aqua; */
+    background: linear-gradient(red, white);
+    border: 2px solid white;
+    border-radius: 50%;
+    
+    /* filter: grayscale(100%); */
+    /* Convert to black and white */
+}
+#wise button:hover{
+    cursor: pointer;
+}
+#a{
+    background-color: green;
+}
+#a,#b,#c,#d{
+    border-radius: 20%;
+    font-size: 18px;
+     font-family: "Baloo Bhai", sans-serif;
+}
+#scoreBox1{
+    font-family: "Baloo Bhai", sans-serif;
+    font-size: 40px;
+    color:brown;
+    font-style: italic;
+}
+#hiscoreBox{
+    font-family: "Baloo Bhai", sans-serif;
+    color: black;
+    font-size: 40px;
+}
